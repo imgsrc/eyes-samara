@@ -44,18 +44,6 @@ h1, h2, h3, h4, h5, h6 {
 figure {
   margin-bottom: 2em; }
 
-::-webkit-selection {
-  color: #fcfcfc;
-  background: #F4594D; }
-
-::-moz-selection {
-  color: #fcfcfc;
-  background: #F4594D; }
-
-::selection {
-  color: #fcfcfc;
-  background: #F4594D; }
-
 #fh5co-header {
   position: relative;
   margin-bottom: 0;
@@ -106,7 +94,8 @@ figure {
 .fh5co-cover,
 .fh5co-hero {
   position: relative;
-  height: 800px; }
+  min-height: -webkit-calc(100vh - 80px);
+  min-height: calc(100vh - 80px); }
   @media screen and (max-width: 768px) {
     .fh5co-cover,
     .fh5co-hero {
@@ -122,8 +111,89 @@ figure {
       left: 0;
       bottom: 0;
       right: 0;
-      z-index: 1;
       background: rgba(0, 0, 0, 0.2); }
+  .fh5co-cover .fh5co-cover,
+  .fh5co-hero .fh5co-cover {
+    background-size: cover;
+    position: relative; }
+    @media screen and (max-width: 768px) {
+      .fh5co-cover .fh5co-cover,
+      .fh5co-hero .fh5co-cover {
+        heifght: inherit;
+        padding: 3em 0; } }
+    .fh5co-cover .fh5co-cover .btn,
+    .fh5co-hero .fh5co-cover .btn {
+      padding: 1em 2em;
+      opacity: .9; }
+    .fh5co-cover .fh5co-cover.fh5co-cover_2,
+    .fh5co-hero .fh5co-cover.fh5co-cover_2 {
+      height: 600px; }
+      @media screen and (max-width: 768px) {
+        .fh5co-cover .fh5co-cover.fh5co-cover_2,
+        .fh5co-hero .fh5co-cover.fh5co-cover_2 {
+          heifght: inherit;
+          padding: 3em 0; } }
+    .fh5co-cover .fh5co-cover .desc,
+    .fh5co-hero .fh5co-cover .desc {
+      top: 40%;
+      position: absolute;
+      width: 100%;
+      margin-top: -80px;
+      z-index: 2;
+      color: #fff; }
+      @media screen and (max-width: 768px) {
+        .fh5co-cover .fh5co-cover .desc,
+        .fh5co-hero .fh5co-cover .desc {
+          padding-left: 15px;
+          padding-right: 15px; } }
+      .fh5co-cover .fh5co-cover .desc h2,
+      .fh5co-hero .fh5co-cover .desc h2 {
+        color: #fff;
+        font-size: 60px;
+        margin-bottom: 10px;
+        font-weight: 300 !important; }
+        .fh5co-cover .fh5co-cover .desc h2 strong,
+        .fh5co-hero .fh5co-cover .desc h2 strong {
+          font-weight: 700; }
+        @media screen and (max-width: 768px) {
+          .fh5co-cover .fh5co-cover .desc h2,
+          .fh5co-hero .fh5co-cover .desc h2 {
+            font-size: 40px; } }
+      .fh5co-cover .fh5co-cover .desc p,
+      .fh5co-hero .fh5co-cover .desc p {
+        display: block;
+        margin-bottom: 30px;
+        font-size: 16px;
+        letter-spacing: 1px;
+        color: rgba(255, 255, 255, 0.5); }
+        .fh5co-cover .fh5co-cover .desc p a,
+        .fh5co-hero .fh5co-cover .desc p a {
+          color: #fff; }
+          .fh5co-cover .fh5co-cover .desc p a:hover, .fh5co-cover .fh5co-cover .desc p a:focus,
+          .fh5co-hero .fh5co-cover .desc p a:hover,
+          .fh5co-hero .fh5co-cover .desc p a:focus {
+            color: #fff !important; }
+            .fh5co-cover .fh5co-cover .desc p a:hover.btn, .fh5co-cover .fh5co-cover .desc p a:focus.btn,
+            .fh5co-hero .fh5co-cover .desc p a:hover.btn,
+            .fh5co-hero .fh5co-cover .desc p a:focus.btn {
+              border: 2px solid #fff !important;
+              background: transparent !important; }
+          .fh5co-cover .fh5co-cover .desc p a.fh5co-site-name,
+          .fh5co-hero .fh5co-cover .desc p a.fh5co-site-name {
+            padding-bottom: 2px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.7); }
+  .fh5co-cover #main-logo,
+  .fh5co-hero #main-logo {
+    display: block;
+    float: right;
+    z-index: 1000;
+    position: relative;
+    top: 0;
+    right: 0; }
+    @media screen and (max-width: 768px) {
+      .fh5co-cover #main-logo,
+      .fh5co-hero #main-logo {
+        display: none; } }
 
 .fh5co-overlay {
   position: absolute !important;
@@ -136,66 +206,10 @@ figure {
   background: rgba(66, 64, 64, 0.9);
   background: rgba(0, 0, 0, 0.2); }
 
-.fh5co-cover {
-  background-size: cover;
-  position: relative; }
-  @media screen and (max-width: 768px) {
-    .fh5co-cover {
-      heifght: inherit;
-      padding: 3em 0; } }
-  .fh5co-cover .btn {
-    padding: 1em 2em;
-    opacity: .9; }
-  .fh5co-cover.fh5co-cover_2 {
-    height: 600px; }
-    @media screen and (max-width: 768px) {
-      .fh5co-cover.fh5co-cover_2 {
-        heifght: inherit;
-        padding: 3em 0; } }
-  .fh5co-cover .desc {
-    top: 40%;
-    position: absolute;
-    width: 100%;
-    margin-top: -80px;
-    z-index: 2;
-    color: #fff; }
-    @media screen and (max-width: 768px) {
-      .fh5co-cover .desc {
-        padding-left: 15px;
-        padding-right: 15px; } }
-    .fh5co-cover .desc h2 {
-      color: #fff;
-      font-size: 60px;
-      margin-bottom: 10px;
-      font-weight: 300 !important; }
-      .fh5co-cover .desc h2 strong {
-        font-weight: 700; }
-      @media screen and (max-width: 768px) {
-        .fh5co-cover .desc h2 {
-          font-size: 40px; } }
-    .fh5co-cover .desc p {
-      display: block;
-      margin-bottom: 30px;
-      font-size: 16px;
-      letter-spacing: 1px;
-      color: rgba(255, 255, 255, 0.5); }
-      .fh5co-cover .desc p a {
-        color: #fff; }
-        .fh5co-cover .desc p a:hover, .fh5co-cover .desc p a:focus {
-          color: #fff !important; }
-          .fh5co-cover .desc p a:hover.btn, .fh5co-cover .desc p a:focus.btn {
-            border: 2px solid #fff !important;
-            background: transparent !important; }
-        .fh5co-cover .desc p a.fh5co-site-name {
-          padding-bottom: 2px;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.7); }
-
 /* Superfish Override Menu */
 .sf-menu {
-  margin: 7px 0 0 0 !important; }
-
-.sf-menu {
-  float: right; }
+  float: right;
+  margin-bottom: 0; }
 
 .sf-menu ul {
   -webkit-box-shadow: none;
@@ -206,41 +220,45 @@ figure {
 
 .sf-menu a {
   color: rgba(0, 0, 0, 0.5);
-  padding: 0.75em 1em !important;
+  padding: .75em 1em !important;
   font-weight: normal;
   border-left: none;
   border-top: none;
   border-top: none;
   text-decoration: none;
   zoom: 1;
-  font-size: 16px;
+  font-size: 25px;
   border-bottom: none !important; }
-  .sf-menu a:hover, .sf-menu a:focus {
-    color: #F4594D !important; }
 
-.sf-menu li.active a:hover, .sf-menu li.active a:focus {
+.sf-menu li:hover, .sf-menu li:focus {
+  background: #F4594D;
+  -webkit-border-radius: 5px;
+          border-radius: 5px; }
+.sf-menu li.active a {
   color: #F4594D; }
 
 .sf-menu li,
 .sf-menu ul li,
-.sf-menu ul ul li,
+.sf-menu ul ul li {
+  background: transparent; }
+
 .sf-menu li:hover,
 .sf-menu li.sfHover {
-  background: transparent; }
+  background: #F4594D; }
 
 .sf-menu ul li a,
 .sf-menu ul ul li a {
   text-transform: none;
-  padding: 0.2em 1em !important;
+  padding: .7em 1em !important;
   letter-spacing: 1px;
-  font-size: 14px !important; }
+  font-size: 18px !important; }
 
 .sf-menu li:hover a,
 .sf-menu li.sfHover a,
 .sf-menu ul li:hover a,
 .sf-menu ul li.sfHover a,
 .sf-menu li.active a {
-  color: #F4594D; }
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.08); }
 
 .sf-menu ul li:hover,
 .sf-menu ul li.sfHover {
@@ -281,69 +299,41 @@ figure {
   border-left-color: #ccc; }
 
 #fh5co-header-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 0;
-  position: relative;
   left: 0;
   width: 100%;
   z-index: 1022;
-  background: #fff; }
+  background: #fce9ca; }
 
 .nav-header {
-  position: relative;
-  float: left;
-  width: 100%; }
-
-#main-logo {
-  font-size: 30px;
-  color: #fff;
-  margin-bottom: 20px;
-  display: block;
-  text-transform: uppercase;
-  margin-top: -5em;
-  position: absolute;
-  left: 50%;
-  margin-left: -61px; }
+  width: 200px; }
   @media screen and (max-width: 768px) {
-    #main-logo {
-      margin-top: 0em;
-      position: relative;
-      left: inherit !important;
-      margin-left: 0; } }
-  #main-logo:hover, #main-logo:focus, #main-logo:active {
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.5); }
-
-#fh5co-logo {
-  position: relative;
-  z-index: 2;
-  font-size: 22px;
-  text-transform: uppercase;
-  margin-top: 35px;
-  font-weight: 700;
-  float: left; }
-  #fh5co-logo span {
-    font-weight: 700; }
-  @media screen and (max-width: 768px) {
-    #fh5co-logo {
-      width: 100%;
+    .nav-header {
+      width: 138px;
       float: none;
-      text-align: center; } }
-  #fh5co-logo a {
-    color: #F4594D; }
-    #fh5co-logo a:hover, #fh5co-logo a:focus {
-      color: #F4594D !important; }
+      height: 80px !important; } }
 
 #fh5co-menu-wrap {
   position: relative;
   z-index: 2;
   display: block;
-  float: right;
-  margin-top: 15px; }
+  float: right; }
   #fh5co-menu-wrap .sf-menu a {
-    padding: 1em .75em; }
+    padding: 1.5em .75em; }
 
-#fh5co-primary-menu > li > ul li.active > a {
-  color: #F4594D !important; }
+#fh5co-primary-menu > li > ul li {
+  background: #F4594D !important; }
 #fh5co-primary-menu > li > .sf-with-ul:after {
   border: none !important;
   font-family: 'icomoon';
@@ -440,7 +430,7 @@ figure {
 #fh5co-primary-menu .fh5co-sub-menu a {
   letter-spacing: 0;
   padding: 0 15px;
-  font-size: 18px;
+  font-size: 22px;
   line-height: 34px;
   color: #575757 !important;
   text-transform: none;
@@ -580,7 +570,6 @@ figure {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -1017,7 +1006,7 @@ figure {
       margin: 0 0 10px 0;
       list-style: none; }
       #offcanvas-menu ul li a {
-        font-size: 18px;
+        font-size: 22px;
         color: rgba(255, 255, 255, 0.4); }
         #offcanvas-menu ul li a:hover {
           color: #F4594D; }
@@ -1030,12 +1019,13 @@ figure {
       display: block !important; }
 
 .fh5co-nav-toggle {
+  margin-right: 40px !important;
   cursor: pointer;
   text-decoration: none; }
   .fh5co-nav-toggle.active i::before, .fh5co-nav-toggle.active i::after {
-    background: #fff; }
+    background: #F4594D; }
   .fh5co-nav-toggle.dark.active i::before, .fh5co-nav-toggle.dark.active i::after {
-    background: #fff; }
+    background: #F4594D; }
   .fh5co-nav-toggle:hover, .fh5co-nav-toggle:focus, .fh5co-nav-toggle:active {
     outline: none;
     border-bottom: none !important; }
@@ -1045,8 +1035,8 @@ figure {
     display: inline-block;
     zoom: 1;
     *display: inline;
-    width: 30px;
-    height: 2px;
+    width: 45px;
+    height: 3px;
     color: #fff;
     font: bold 14px/.4 Helvetica;
     text-transform: uppercase;
@@ -1056,8 +1046,8 @@ figure {
     transition: all .2s ease-out; }
     .fh5co-nav-toggle i::before, .fh5co-nav-toggle i::after {
       content: '';
-      width: 30px;
-      height: 2px;
+      width: 45px;
+      height: 3px;
       background: #fff;
       position: absolute;
       left: 0;
@@ -1065,12 +1055,12 @@ figure {
       transition: 0.2s; }
   .fh5co-nav-toggle.dark i {
     position: relative;
-    color: #000;
-    background: #000;
+    color: #F4594D;
+    background: #F4594D;
     -webkit-transition: all .2s ease-out;
     transition: all .2s ease-out; }
     .fh5co-nav-toggle.dark i::before, .fh5co-nav-toggle.dark i::after {
-      background: #000;
+      background: #F4594D;
       -webkit-transition: 0.2s;
       transition: 0.2s; }
 
@@ -1106,7 +1096,6 @@ figure {
   top: 0px;
   right: 0px;
   z-index: 9999;
-  display: block;
   margin: 0 auto;
   display: none;
   cursor: pointer; }
@@ -1114,7 +1103,7 @@ figure {
     .fh5co-nav-toggle {
       display: block;
       top: 0px;
-      margin-top: 2em; } }
+      margin-top: 1.5em; } }
 
 @media screen and (max-width: 480px) {
   .col-xxs-12 {
@@ -1171,12 +1160,3 @@ figure {
   position: absolute;
   left: 100px;
   top: 0; }
-
-.fh5co-loader {
-  position: fixed;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: 9999;
-  background: url(../images/hourglass.svg) center no-repeat #222222; }
