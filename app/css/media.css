@@ -1,0 +1,109 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1787px) {
+
+}
+
+@media only screen and (max-width: 1280px) {
+
+}
+
+@media only screen and (max-width: 1226px) {
+
+}
+
+@media only screen and (max-width: 1200px) {
+
+}
+
+@media only screen and (max-width: 1068px) {
+
+}
+
+/* iPad Air Retina landscape */
+@media only screen and (max-width: 1024px) {
+
+}
+
+@media only screen and (max-width: 980px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+    .feature-left {
+        margin-bottom: 30px;
+    }
+    .feature-left .icon {
+        width: 10%;
+    }
+    .feature-left .feature-copy {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 782px) {
+
+}
+
+@media only screen and (max-width: 768px) {
+    .feature-left .icon {
+        width: 15%;
+    }
+    .feature-left .feature-copy {
+        width: 85%;
+    }
+    #fh5co-services, #fh5co-about, #fh5co-contact {
+        padding: 4em 0;
+    }
+}
+
+/* iPad Air Retina portrait */
+@media only screen and (max-width: 672px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+    .feature-left .feature-copy {
+        width: 80%;
+    }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+
+}
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+
+}

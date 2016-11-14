@@ -32,7 +32,6 @@ $form-group-margin-bottom: 30px;
   -moz-transition: all $transition unquote($ease);
   -o-transition: all $transition unquote($ease);
   -webkit-transition: all $transition unquote($ease);
-  -ms-transition: all $transition unquote($ease);
   transition: all $transition unquote($ease);
 }
 
@@ -176,7 +175,6 @@ figure {
   top: 0 !important;
   -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
-  -ms-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
   -o-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
 }
@@ -194,10 +192,10 @@ figure {
         margin-left: 0;
       }
       &:hover {
-        color: rgba(255, 255, 255, 1) !important;
+        color: $brand-primary;
       }
     }
-    @media screen and (max-width: $screen-sm) {
+    @media screen and (max-width: 768px) {
       text-align: center;
     }
   }
@@ -224,7 +222,7 @@ figure {
         }
       }
     }
-    @media screen and (max-width: $screen-sm) {
+    @media screen and (max-width: 768px) {
       text-align: center !important;
     }
   }
@@ -235,7 +233,7 @@ figure {
   position: relative;
   min-height: calc(100vh - 80px);
   // font-weight: 300;
-  @media screen and (max-width: $screen-sm) {
+  @media screen and (max-width: 768px) {
     height: 700px;
   }
   &.fh5co-hero-2 {
@@ -255,8 +253,8 @@ figure {
   .fh5co-cover {
     background-size: cover;
     position: relative;
-    @media screen and (max-width: $screen-sm) {
-      heifght: inherit;
+    @media screen and (max-width: 768px) {
+      height: inherit;
       padding: 3em 0;
     }
     .btn {
@@ -265,34 +263,89 @@ figure {
     }
     &.fh5co-cover_2 {
       height: 600px;
-      @media screen and (max-width: $screen-sm) {
-        heifght: inherit;
+      @media screen and (max-width: 768px) {
+        height: inherit;
         padding: 3em 0;
       }
 
     }
     .desc {
       top: 40%;
+      right: 7%;
       position: absolute;
-      width: 100%;
-      margin-top: -80px;
+      width: 40%;
+      padding: 10px;
+      //margin-top: -80px;
       z-index: 2;
       color: $brand-white;
+      border-radius: 8px;
+      background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 100%);
+      background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 100%);
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3ffffff', endColorstr='#b3ffffff', GradientType=0);
 
-      @media screen and (max-width: $screen-sm) {
+      @media only screen and (max-width: 1366px) {
+        width: 46%;
+        top: 35%;
+      }
+      @media only screen and (max-width: 1280px) {
+        top: 35%;
+        right: 10%;
+      }
+      @media only screen and (max-width: 1024px) {
+        width: 70%;
+        top: 40%;
+        right: 4%;
+        p {
+          font-size: 15px !important;
+        }
+      }
+      @media screen and (max-width: 768px) {
         padding-left: 15px;
         padding-right: 15px;
+        width: 95%;
+        right: 3%;
+      }
+      @media only screen and (max-width: 360px) {
+        padding-left: 5px;
+        padding-right: 5px;
+        top: 23%;
+        width: 95% !important;
+      }
+      .animate-box {
+        @media screen and (max-width: 480px) {
+          h2 {
+            font-size: 26px;
+          }
+          p {
+            font-size: 14px;
+            margin-bottom: 15px;
+          }
+          a.btn-lg {
+            font-size: 14px;
+          }
+
+          @media only screen and (max-width: 360px) {
+            h2 {
+              font-size: 22px;
+            }
+            p {
+              font-size: 12px;
+            }
+          }
+        }
+
       }
       h2 {
-        color: $brand-white;
+        color: $brand-darker;
         // text-transform: uppercase;
-        font-size: 60px;
+        font-size: 30px;
         margin-bottom: 10px;
         font-weight: 300 !important;
         strong {
           font-weight: 700;
         }
-        @media screen and (max-width: $screen-sm) {
+        @media screen and (max-width: 768px) {
           font-size: 40px;
         }
       }
@@ -302,15 +355,21 @@ figure {
 
         font-size: 16px;
         letter-spacing: 1px;
-        color: rgba(255, 255, 255, .5);
+        color: $brand-darker;
         a {
-          color: $brand-white;
+          color: $brand-primary;
+          &.btn {
+            color: $brand-white;
+          }
 
           &:hover, &:focus {
-            color: #fff !important;
+            color: $brand-lighter !important;
             &.btn {
-              border: 2px solid #fff !important;
+              border: 2px solid $brand-primary !important;
               background: transparent !important;
+              &:hover, &:focus {
+                color: $brand-primary !important;
+              }
             }
           }
 
@@ -320,6 +379,7 @@ figure {
           }
         }
       }
+
     }
   }
   #main-logo {
@@ -332,11 +392,109 @@ figure {
     top: 0;
     right: 0;
     //margin-left: -61px;
-    @media screen and (max-width: $screen-sm) {
+    @media screen and (max-width: 768px) {
       display: none;
     }
 
   }
+}
+
+.top_header {
+  @include flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 30%;
+  padding: 20px 0;
+  position: absolute;
+  right: 15%;
+  color: $brand-darker;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 15px;
+  .top_contacts {
+    display: flex;
+    flex-direction: column;
+    .top-phone {
+      .phone {
+        font-size: 25px;
+
+        @media only screen and (max-width: 360px) {
+          font-size: 20px;
+        }
+      }
+      .btn_phone {
+        @media only screen and (max-width: 1024px) {
+
+        }
+        @media only screen and (max-width: 360px) {
+          font-size: 12px;
+          padding: 10px;
+        }
+      }
+    }
+    .top_addr {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-bottom: 15px;
+      @media screen and (max-width: 480px) {
+        margin-bottom: 5px;
+      }
+      @media only screen and (max-width: 1024px) {
+
+      }
+      @media only screen and (max-width: 360px) {
+        padding: 0;
+        font-size: 14px;
+      }
+    }
+    .marker {
+      margin-right: 10px;
+    }
+  }
+  .btn_soc {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    width: 200px;
+    font-size: 40px;
+    @media only screen and (max-width: 360px) {
+      font-size: 25px;
+    }
+
+  }
+  @media only screen and (max-width: 1366px) {
+    width: 38%;
+  }
+  @media only screen and (max-width: 1024px) {
+    right: 20%;
+    padding: 10px 0;
+    flex-direction: column;
+    justify-content: center;
+    .top_addr {
+      margin-bottom: 0 !important;
+    }
+    .btn_soc {
+      position: relative;
+      right: -25%;
+    }
+  }
+  @media only screen and (max-width: 1280px) {
+    width: 40%;
+  }
+  @media screen and (max-width: 768px) {
+    top: 0;
+    right: 35%;
+    width: 70%;
+  }
+
+  @media screen and (max-width: 480px) {
+    flex-flow: row wrap;
+    padding: 5px 0;
+    right: 20%;
+    width: 80%;
+  }
+
 }
 
 .fh5co-overlay {
@@ -349,13 +507,8 @@ figure {
   z-index: 1;
   // background: rgba(48,56,65,.92);
   background: rgba(66, 64, 64, .9);
-  background: rgba(0, 0, 0, .2);
+  //background: rgba(0, 0, 0, .2);
 }
-
-/* Superfish Override Menu */
-//.sf-menu {
-//  margin: 7px 0 0 0 !important;
-//}
 
 .sf-menu {
   float: right;
@@ -371,7 +524,7 @@ figure {
 
 .sf-menu a {
   color: rgba(0, 0, 0, .5);
-  padding: .75em 1em !important;
+  padding: .75em .5em !important;
   font-weight: normal;
   border-left: none;
   border-top: none;
@@ -479,21 +632,25 @@ figure {
   width: 100%;
   z-index: 1022;
   background: $brand-secondary;
-}
-
-.nav-header {
-  //bottom: -80px;
-  //left: -175px;
-  //position: relative;
-
-  width: 200px;
-  @media screen and (max-width: $screen-sm) {
-    width: 138px;
-    float: none;
-    height: 80px !important;
+  @media only screen and (max-width: 1024px) {
+    #fh5co-logo {
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    #fh5co-logo {
+      display: block;
+    }
   }
 
 }
+
+//width: 200px;
+//@media screen and (max-width: 768px) {
+//  width: 138px;
+//  float: none;
+//  height: 80px !important;
+//}
 
 #fh5co-menu-wrap {
   position: relative;
@@ -555,11 +712,9 @@ figure {
   left: 0;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
   border-radius: 5px;
   -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-  -ms-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   -o-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   > li {
@@ -607,7 +762,6 @@ figure {
   border-color: #ebebeb;
   -webkit-box-shadow: 0 5px 15px 4px rgba(0, 0, 0, 0.09);
   -moz-box-shadow: 0 5px 15px 4px rgba(0, 0, 0, 0.09);
-  -ms-box-shadow: 0 5px 15px 4px rgba(0, 0, 0, 0.09);
   -o-box-shadow: 0 5px 15px 4px rgba(0, 0, 0, 0.09);
   box-shadow: 0 5px 15px 4px rgba(0, 0, 0, 0.09);
   &:before {
@@ -635,7 +789,7 @@ figure {
 #fh5co-features,
 .fh5co-content-section {
   padding: 7em 0;
-  @media screen and (max-width: $screen-sm) {
+  @media screen and (max-width: 768px) {
     padding: 4em 0;
   }
 
@@ -689,15 +843,14 @@ figure {
 
 .service {
   background: $brand-primary;
-  background: $brand-white;
+  //background: $brand-white;
   padding: 40px 20px 20px 20px;
   margin-bottom: 30px;
   @include border-radius(4px);
   @include transition(.3s);
   &:hover, &:focus, &:active {
-    -webkit-box-shadow: 0px 10px 20px -12px rgba(0, 0, 0, 0.18);
-    -moz-box-shadow: 0px 10px 20px -12px rgba(0, 0, 0, 0.18);
-    box-shadow: 0px 10px 20px -12px rgba(0, 0, 0, 0.18);
+    -webkit-box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.18);
   }
 
   span {
@@ -730,10 +883,10 @@ figure {
     float: left;
     text-align: center;
     width: 15%;
-    @media screen and (max-width: $screen-md) {
+    @media screen and (max-width: 992px) {
       width: 10%;
     }
-    @media screen and (max-width: $screen-sm) {
+    @media screen and (max-width: 768px) {
       width: 15%;
     }
     i {
@@ -746,16 +899,18 @@ figure {
   .feature-copy {
     float: right;
     width: 80%;
-    @media screen and (max-width: $screen-md) {
+    @media screen and (max-width: 992px) {
       width: 90%;
     }
-    @media screen and (max-width: $screen-sm) {
+    @media screen and (max-width: 768px) {
       width: 85%;
     }
-    @media screen and (max-width: $screen-xs) {
+    @media screen and (max-width: 480px) {
       width: 80%;
     }
+    @media only screen and (max-width: 360px) {
 
+    }
     h3 {
       font-size: 18px;
       color: lighten($brand-black, 10%);
@@ -773,7 +928,7 @@ figure {
   padding: 7em 0;
   // background: #303841;
   min-height: 500px;
-  @media screen and (max-width: $screen-sm) {
+  @media screen and (max-width: 768px) {
     padding: 3em 0;
   }
 
@@ -799,8 +954,14 @@ figure {
     float: left;
     clear: left;
     position: relative;
-    @media screen and (max-width: $screen-xs) {
+    @media only screen and (max-width: 1024px) {
+
+    }
+    @media screen and (max-width: 480px) {
       margin-left: 0;
+    }
+    @media only screen and (max-width: 360px) {
+
     }
     a {
       min-height: 400px;
@@ -834,7 +995,7 @@ figure {
         right: 2em;
         position: absolute;
         z-index: 100;
-        @media screen and (max-width: $screen-sm) {
+        @media screen and (max-width: 768px) {
           bottom: 1em;
           left: 1em;
           right: 1em;
@@ -848,7 +1009,7 @@ figure {
         h2 {
           color: $brand-white;
           margin-bottom: 0;
-          @media screen and (max-width: $screen-sm) {
+          @media screen and (max-width: 768px) {
             font-size: 20px;
           }
         }
@@ -857,26 +1018,35 @@ figure {
     }
     &.two-third {
       width: 65.6%;
-      @media screen and (max-width: $screen-sm) {
+      @media screen and (max-width: 768px) {
         width: 49%;
       }
-      @media screen and (max-width: $screen-xs) {
+      @media screen and (max-width: 480px) {
         width: 100%;
+      }
+      @media only screen and (max-width: 360px) {
+
       }
     }
     &.one-third {
       width: 32.3%;
-      @media screen and (max-width: $screen-sm) {
+      @media screen and (max-width: 768px) {
         width: 49%;
       }
-      @media screen and (max-width: $screen-xs) {
+      @media screen and (max-width: 480px) {
         width: 100%;
+      }
+      @media only screen and (max-width: 360px) {
+
       }
     }
     &.one-half {
       width: 49%;
-      @media screen and (max-width: $screen-xs) {
+      @media screen and (max-width: 480px) {
         width: 100%;
+      }
+      @media only screen and (max-width: 360px) {
+
       }
     }
 
@@ -889,38 +1059,19 @@ figure {
 
   .feature-left {
     margin-bottom: 40px;
-    @media screen and (max-width: $screen-md) {
-      margin-bottom: 30px;
-    }
     .icon {
       i {
         color: lighten($brand-black, 85%) !important;
       }
     }
-
     .icon {
       float: left;
       text-align: center;
       width: 15%;
-      @media screen and (max-width: $screen-md) {
-        width: 10%;
-      }
-      @media screen and (max-width: $screen-sm) {
-        width: 15%;
-      }
     }
     .feature-copy {
       float: right;
       width: 80%;
-      @media screen and (max-width: $screen-md) {
-        width: 90%;
-      }
-      @media screen and (max-width: $screen-sm) {
-        width: 85%;
-      }
-      @media screen and (max-width: $screen-xs) {
-        width: 80%;
-      }
     }
     h3 {
       font-size: 16px;
@@ -941,9 +1092,7 @@ figure {
 
 #fh5co-services, #fh5co-about, #fh5co-contact {
   padding: 7em 0;
-  @media screen and (max-width: $screen-sm) {
-    padding: 4em 0;
-  }
+
 }
 
 #fh5co-services {
@@ -970,14 +1119,14 @@ figure {
     margin-top: 50px;
     position: relative;
     @include inline-block;
-    @media screen and (max-width: $screen-sm) {
-      margin-top: 0px;
+    @media screen and (max-width: 768px) {
+      margin-top: 0;
       float: none;
     }
     i {
       font-size: 200px;
       color: $brand-primary;
-      @media screen and (max-width: $screen-sm) {
+      @media screen and (max-width: 768px) {
         font-size: 100px;
       }
     }
@@ -1012,10 +1161,8 @@ figure {
   .form-control {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
-    -ms-box-shadow: none;
     -o-box-shadow: none;
     box-shadow: none;
-    border: none;
     border: 1px solid rgba(0, 0, 0, .1);
     font-size: 18px;
 
@@ -1042,7 +1189,7 @@ figure {
   border-radius: 5px;
   margin-bottom: 30px;
 
-  @media screen and (max-width: $screen-sm) {
+  @media screen and (max-width: 768px) {
     border-right: 0;
     margin-bottom: 80px;
   }
@@ -1056,7 +1203,7 @@ figure {
   }
   figure {
     position: relative;
-    top: 0px;
+    top: 0;
     background-size: cover;
     margin-bottom: 20px;
     img {
@@ -1111,16 +1258,11 @@ figure {
   margin-bottom: 60px;
   a {
     img {
-
       width: 100%;
-
-      &:hover {
-      }
-
     }
   }
 
-  @media screen and (max-width: $screen-sm) {
+  @media screen and (max-width: 768px) {
     width: 100%;
   }
 
@@ -1132,9 +1274,9 @@ figure {
     padding: 30px;
     float: right;
     // margin-top: -5em;
-    -webkit-box-shadow: 0px 10px 20px -12px rgba(0, 0, 0, 0.18);
-    -moz-box-shadow: 0px 10px 20px -12px rgba(0, 0, 0, 0.18);
-    box-shadow: 0px 10px 20px -12px rgba(0, 0, 0, 0.18);
+    -webkit-box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.18);
+    -moz-box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.18);
 
     span {
       display: inline-block;
@@ -1180,7 +1322,7 @@ figure {
     font-size: 60px;
     text-transform: uppercase;
     font-weight: 300;
-    @media screen and (max-width: $screen-sm) {
+    @media screen and (max-width: 768px) {
       font-size: 30px;
     }
   }
@@ -1196,7 +1338,7 @@ figure {
   width: 100%;
   height: 500px;
   position: relative;
-  @media screen and (max-width: $screen-sm) {
+  @media screen and (max-width: 768px) {
     height: 200px;
   }
 }
@@ -1266,11 +1408,11 @@ figure {
 .btn {
   text-transform: uppercase;
   letter-spacing: 2px;
+  border-radius: 20px;
   @include transition(.3s);
   &.btn-primary {
     background: $brand-primary;
     color: $brand-white;
-    border: none !important;
     border: 2px solid transparent !important;
     &:hover, &:active, &:focus {
       box-shadow: none;
@@ -1279,8 +1421,8 @@ figure {
     }
   }
   &:hover, &:active, &:focus {
-    background: #393e46 !important;
-    color: $brand-white;
+    background: $brand-lighter !important;
+    color: $brand-white !important;
     outline: none !important;
   }
   &.btn-default {
@@ -1288,6 +1430,10 @@ figure {
       border-color: transparent;
     }
   }
+}
+
+.btn-lg {
+  border-radius: 30px;
 }
 
 .animate-box {
@@ -1318,7 +1464,7 @@ figure {
 
 // offcanvas
 #fh5co-menu-wrap {
-  @media screen and (max-width: $screen-sm) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 }
@@ -1334,7 +1480,7 @@ figure {
   padding: 20px;
   overflow-y: scroll !important;
   display: none;
-  @media screen and (max-width: $screen-sm) {
+  @media screen and (max-width: 768px) {
     display: block;
   }
   ul {
@@ -1407,6 +1553,18 @@ figure {
       position: absolute;
       left: 0;
       @include transition(.2s);
+      @media only screen and (max-width: 1024px) {
+
+      }
+      @media only screen and (max-width: 360px) {
+        width: 30px;
+      }
+    }
+    @media only screen and (max-width: 1024px) {
+
+    }
+    @media only screen and (max-width: 360px) {
+      width: 30px;
     }
   }
   &.dark {
@@ -1418,6 +1576,15 @@ figure {
       &::before, &::after {
         background: $brand-primary;
         @include transition(.2s);
+      }
+      @media screen and (max-width: 480px) {
+        right: -15px;
+      }
+      @media only screen and (max-width: 1024px) {
+
+      }
+      @media only screen and (max-width: 360px) {
+
       }
     }
   }
@@ -1463,19 +1630,24 @@ figure {
 
 .fh5co-nav-toggle {
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 0;
+  right: 0;
   z-index: 9999;
   //display: block;
   margin: 0 auto;
   display: none;
   cursor: pointer;
-  @media screen and (max-width: $screen-sm) {
+  @media only screen and (max-width: 1024px) {
+
+  }
+  @media screen and (max-width: 768px) {
     display: block;
-    top: 0px;
+    top: 0;
     margin-top: 1.5em;
   }
-
+  @media only screen and (max-width: 360px) {
+    right: -15px;
+  }
 }
 
 // // Helper Class
@@ -1489,42 +1661,42 @@ figure {
 
 .row-bottom-padded-lg {
   padding-bottom: 7em;
-  @media screen and (max-width: $screen-sm) {
+  @media screen and (max-width: 768px) {
     padding-bottom: 2em;
   }
 }
 
 .row-top-padded-lg {
   padding-top: 7em;
-  @media screen and (max-width: $screen-sm) {
+  @media screen and (max-width: 768px) {
     padding-top: 2em;
   }
 }
 
 .row-bottom-padded-md {
   padding-bottom: 4em;
-  @media screen and (max-width: $screen-sm) {
+  @media screen and (max-width: 768px) {
     padding-bottom: 2em;
   }
 }
 
 .row-top-padded-md {
   padding-top: 4em;
-  @media screen and (max-width: $screen-sm) {
+  @media screen and (max-width: 768px) {
     padding-top: 2em;
   }
 }
 
 .row-bottom-padded-sm {
   padding-bottom: 2em;
-  @media screen and (max-width: $screen-sm) {
+  @media screen and (max-width: 768px) {
     padding-bottom: 2em;
   }
 }
 
 .row-top-padded-sm {
   padding-top: 2em;
-  @media screen and (max-width: $screen-sm) {
+  @media screen and (max-width: 768px) {
     padding-top: 2em;
   }
 }
