@@ -5,8 +5,36 @@
 
 }
 
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1366px) {
+    .fh5co-cover .fh5co-cover .desc,
+    .fh5co-hero .fh5co-cover .desc {
+        width: 46%;
+        top: 35%;
+    }
 
+    .top_header {
+        width: 38%;
+    }
+    .fh5co-cover .fh5co-cover .desc .animate-box img,
+    .fh5co-hero .fh5co-cover .desc .animate-box img {
+        width: 600px;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .fh5co-cover .fh5co-cover .desc,
+    .fh5co-hero .fh5co-cover .desc {
+        top: 35%;
+        right: 4%;
+    }
+
+    .top_header {
+        width: 40%;
+        right: 18%;
+    }
+    .top_contacts .popup {
+        margin-left: 15px;
+    }
 }
 
 @media only screen and (max-width: 1226px) {
@@ -21,9 +49,48 @@
 
 }
 
+@media only screen and (max-width: 1038px) {
+    #fh5co-header-section #fh5co-logo {
+        display: none;
+    }
+}
+
 /* iPad Air Retina landscape */
 @media only screen and (max-width: 1024px) {
+    .fh5co-cover .fh5co-cover .desc,
+    .fh5co-hero .fh5co-cover .desc {
+        top: 35%;
+        right: 18%;
+    }
 
+    .fh5co-cover .fh5co-cover .desc p,
+    .fh5co-hero .fh5co-cover .desc p {
+        font-size: 15px !important;
+    }
+
+    .top_header {
+        right: 20%;
+        padding: 10px 0;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .top_header .btn_soc {
+        position: relative;
+        right: -25%;
+    }
+
+    .fh5co-cover #main-logo,
+    .fh5co-hero #main-logo {
+        display: block;
+    }
 }
 
 @media only screen and (max-width: 980px) {
@@ -35,54 +102,393 @@
     .feature-left {
         margin-bottom: 30px;
     }
+
     .feature-left .icon {
         width: 10%;
     }
+
     .feature-left .feature-copy {
         width: 90%;
     }
+
+    .feature-left .icon {
+        width: 10%;
+    }
+
+    .feature-left .feature-copy {
+        width: 90%;
+    }
+
 }
 
 @media only screen and (max-width: 800px) {
+    .top_contacts .popup {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
+    .sf-menu a {
+        font-size: 21px;
+    }
+
+    .top_header {
+        right: 32%;
+        width: 55%;
+    }
+
+    .fh5co-cover .fh5co-cover .desc,
+    .fh5co-hero .fh5co-cover .desc {
+        width: 90%;
+        right: 5%;
+        top: 50%;
+
+    }
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 782px) {
+    #fh5co-work-section,
+    #fh5co-services-section,
+    #fh5co-work-section_2,
+    #fh5co-blog-section,
+    #fh5co-features,
+    .fh5co-content-section {
+        padding: 3em 0;
+    }
 
 }
 
 @media only screen and (max-width: 768px) {
-    .feature-left .icon {
-        width: 15%;
+
+    #fh5co-work-section,
+    #fh5co-services-section,
+    #fh5co-work-section_2,
+    #fh5co-blog-section,
+    #fh5co-features,
+    .fh5co-content-section {
+        padding: 4em 0;
     }
+
+    #fh5co-portfolio-list li.one-third {
+        width: 49%;
+    }
+
+    #fh5co-portfolio-list li.two-third {
+        width: 49%;
+    }
+
+    #fh5co-portfolio-list li a .case-studies-summary h2 {
+        font-size: 20px;
+    }
+
+    #fh5co-portfolio-list li a .case-studies-summary {
+        bottom: 1em;
+        left: 1em;
+        right: 1em;
+    }
+
     .feature-left .feature-copy {
         width: 85%;
     }
+
+    #fh5co-portfolio {
+        padding: 3em 0;
+    }
+
+    .top_header {
+        top: 0;
+        right: 20%;
+        width: 70%;
+    }
+
+    .feature-left .icon {
+        width: 15%;
+    }
+
+    .nav-header #fh5co-logo {
+        display: block !important;
+    }
+
+    .feature-left .icon {
+        width: 15%;
+    }
+
+    .feature-left .feature-copy {
+        width: 85%;
+    }
+
     #fh5co-services, #fh5co-about, #fh5co-contact {
         padding: 4em 0;
+    }
+
+    #fh5co-services .fh5co-icon {
+        margin-top: 0;
+        float: none;
+    }
+
+    #fh5co-services .fh5co-icon i {
+        font-size: 100px;
+    }
+
+    .fh5co-testimonial, .fh5co-team {
+        border-right: 0;
+        margin-bottom: 80px;
+    }
+
+    #fh5co-start-project-section h2 {
+        font-size: 30px;
+    }
+
+    #map {
+        height: 200px;
+    }
+
+    #fh5co-menu-wrap {
+        display: none;
+    }
+
+    #offcanvas-menu {
+        display: block;
+    }
+
+    .fh5co-nav-toggle {
+        display: block;
+        top: 0;
+        margin-top: 1.5em;
+    }
+
+    .header-top .fh5co-link {
+        text-align: center;
+    }
+
+    .header-top .fh5co-social {
+        text-align: center !important;
+    }
+
+    .fh5co-cover,
+    .fh5co-hero {
+        height: 700px;
+    }
+
+    .fh5co-cover .fh5co-cover,
+    .fh5co-hero .fh5co-cover {
+        height: inherit;
+        padding: 3em 0;
+    }
+
+    .fh5co-cover .fh5co-cover.fh5co-cover_2,
+    .fh5co-hero .fh5co-cover.fh5co-cover_2 {
+        height: inherit;
+        padding: 3em 0;
+    }
+
+    .fh5co-cover .fh5co-cover .desc,
+    .fh5co-hero .fh5co-cover .desc {
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 95%;
+        right: 3%;
+    }
+
+    .fh5co-cover .fh5co-cover .desc h2,
+    .fh5co-hero .fh5co-cover .desc h2 {
+        font-size: 40px;
+    }
+
+    .fh5co-cover #main-logo,
+    .fh5co-hero #main-logo {
+        display: none;
     }
 }
 
 /* iPad Air Retina portrait */
 @media only screen and (max-width: 672px) {
+    .top_header {
+        right: 25%;
+    }
+
+    .fh5co-cover .fh5co-cover .desc, .fh5co-hero .fh5co-cover .desc {
+        top: 40%;
+    }
+    .fh5co-cover,
+    .fh5co-hero {
+        position: relative;
+        min-height: calc(88vh - 80px);
+    }
 
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
+
+    #fh5co-portfolio-list li.one-half {
+        width: 100%;
+    }
+
+    #fh5co-portfolio-list li.one-third {
+        width: 100%;
+    }
+
+    #fh5co-portfolio-list li.two-third {
+        width: 100%;
+    }
+
+    .top_header {
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+        padding: 5px 0;
+        right: 20%;
+        width: 80%;
+    }
+
     .feature-left .feature-copy {
         width: 80%;
     }
+
+    .feature-left .feature-copy {
+        width: 80%;
+    }
+
+    .fh5co-nav-toggle .dark i {
+        right: -15px;
+    }
+
+    .fh5co-cover .fh5co-cover .desc .animate-box h2,
+    .fh5co-hero .fh5co-cover .desc .animate-box h2 {
+        font-size: 26px;
+    }
+
+    .fh5co-cover .fh5co-cover .desc .animate-box p,
+    .fh5co-hero .fh5co-cover .desc .animate-box p {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .fh5co-cover .fh5co-cover .desc .animate-box a.btn-lg,
+    .fh5co-hero .fh5co-cover .desc .animate-box a.btn-lg {
+        font-size: 14px;
+    }
+
+    .top_header .top_contacts .top_addr {
+        margin-bottom: 5px;
+    }
+
+    #fh5co-portfolio-list li {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .fh5co-cover .fh5co-cover .desc .animate-box img,
+    .fh5co-hero .fh5co-cover .desc .animate-box img {
+        width: 320px;
+    }
+    .fh5co-cover .fh5co-cover .desc,
+    .fh5co-hero .fh5co-cover .desc {
+        padding-left: 5px;
+        padding-right: 5px;
+        top: 50%;
+    }
+    .fh5co-nav-toggle {
+        right: -15px;
+    }
+
+    .fh5co-nav-toggle i,
+    .fh5co-nav-toggle i::before,
+    .fh5co-nav-toggle i::after {
+        width: 30px;
+    }
+
+    .top_header .top_contacts .top_addr  {
+        margin-bottom: 10px;
+    }
+
+    .top_header .top_contacts .top-phone {
+        margin-bottom: 5px;
+    }
+
+    .top_header .btn_soc {
+        font-size: 25px;
+        right: 0;
+    }
+
+    .top_contacts .popup {
+        width: 100%;
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .top_header .top_contacts .top-phone {
+        font-size: 20px;
+    }
+
 }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
 
+
+    .fh5co-cover .fh5co-cover .desc,
+    .fh5co-hero .fh5co-cover .desc {
+        padding-left: 5px;
+        padding-right: 5px;
+        top: 34%;
+    }
+    .top_header .top_contacts .top-phone .btn_phone {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .fh5co-cover .fh5co-cover .desc .animate-box h2,
+    .fh5co-hero .fh5co-cover .desc .animate-box h2 {
+        font-size: 22px;
+    }
+
+    .fh5co-cover .fh5co-cover .desc .animate-box p,
+    .fh5co-hero .fh5co-cover .desc .animate-box p {
+        font-size: 12px;
+    }
+
+    .top_header .top_contacts .top-phone .phone {
+        font-size: 20px;
+    }
+
+    .top_header .top_contacts .top_addr {
+        padding: 0;
+        font-size: 14px;
+        margin-bottom: 10px !important;
+    }
+
+    .top_header .btn_phone {
+        font-size: 12px;
+        padding: .5em !important;
+    }
+
+    .fh5co-nav-toggle {
+        right: -24px;
+    }
+
+    .heading-section p {
+        font-size: 16px;
+    }
+
+    .heading-section h3 {
+        font-size: 30px;
+    }
+    #fh5co-feature-product {
+        padding: 1em;
+    }
+    .fh5co-testimonial, .fh5co-team {
+        padding: 0;
+    }
+    .fh5co-content-section {
+        padding: 1em 0;
+    }
 }
 
 /*==========  Mobile First Method  ==========*/
-
 /* Custom, iPhone Retina */
 @media only screen and (min-width: 320px) {
 
