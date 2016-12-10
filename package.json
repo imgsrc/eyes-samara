@@ -1,7 +1,6 @@
 {
   "name": "eyes-samara",
   "version": "1.0.0",
-  "description": "",
   "main": "gulpfile.js",
   "dependencies": {},
   "devDependencies": {
@@ -9,7 +8,9 @@
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-imagemin": "^3.1.1",
-    "gulp-ruby-sass": "^2.1.1"
+    "gulp-ruby-sass": "^2.1.1",
+    "node-bourbon": "^4.2.8",
+    "node-normalize-scss": "^1.4.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -23,5 +24,6 @@
   "bugs": {
     "url": "https://github.com/imgsrc/eyes-samara/issues"
   },
-  "homepage": "https://github.com/imgsrc/eyes-samara#readme"
+  "homepage": "https://github.com/imgsrc/eyes-samara#readme",
+  "description": ""
 }

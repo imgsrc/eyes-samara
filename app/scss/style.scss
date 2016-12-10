@@ -158,6 +158,16 @@ figure {
   display: none;
 }
 
+#callback {
+  h3 {
+    margin-top: 20px;
+    font-size: 26px;
+    color: $brand-primary;
+    text-align: center;
+    display: none;
+  }
+}
+
 #fh5co-header {
   position: relative;
   margin-bottom: 0;
@@ -236,6 +246,7 @@ figure {
     }
   }
   .fh5co-cover {
+    background-image: url(../images/bg_img.jpg);
     background-size: cover;
     position: relative;
     .btn {
@@ -282,7 +293,8 @@ figure {
   right: 15%;
   color: $brand-darker;
   background: rgba(255, 255, 255, 0.6);
-  border-radius: 15px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   .top_contacts {
     display: flex;
     flex-direction: column;
@@ -410,7 +422,7 @@ figure {
 .sf-menu ul li a,
 .sf-menu ul ul li a {
   text-transform: none;
-  padding: .7em 1em !important;
+  padding: .5em 1em !important;
   letter-spacing: 1px;
   font-size: 18px !important;
 }
@@ -665,6 +677,7 @@ figure {
       width: 300px;
     }
     img {
+
       max-width: 100%;
     }
   }
@@ -705,16 +718,35 @@ figure {
 }
 
 #fh5co-work-section,
-#fh5co-services-section,
 #fh5co-work-section_2,
 #fh5co-blog-section,
-#fh5co-features,
-.fh5co-content-section {
+#fh5co-features {
   padding: 5em 0;
 }
 
+//#fh5co-blog-section {
+//  .features {
+//    display: flex;
+//    flex-direction: row;
+//    flex-wrap: nowrap;
+//    align-content: flex-start;
+//  }
+//  .row:last-child {
+//    width: 100%;
+//    justify-content: center;
+//  }
+//}
+
+#fh5co-services-section {
+  padding-bottom: 5em;
+}
+
+.fh5co-content-section {
+  padding-top: 5em;
+}
+
 #fh5co-portfolio {
-  padding: 7em 0;
+  padding: 5em 0;
   // background: #303841;
   min-height: 500px;
 }
@@ -798,7 +830,7 @@ figure {
 }
 
 #fh5co-features {
-  padding: 7em 0;
+  padding: 5em 0;
 
   .feature-left {
     margin-bottom: 40px;
@@ -830,11 +862,11 @@ figure {
 }
 
 #fh5co-feature-product {
-  padding: 7em 0;
+  padding: 5em 0;
 }
 
 #fh5co-services, #fh5co-about, #fh5co-contact {
-  padding: 7em 0;
+  padding: 5em 0;
 }
 
 #fh5co-services {
@@ -991,9 +1023,8 @@ figure {
       width: 100%;
     }
   }
-
   .blog-text {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     position: relative;
     background: $brand-white;
     width: 100%;
@@ -1006,7 +1037,7 @@ figure {
 
     span {
       display: inline-block;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       &.posted_by {
         font-style: italic;
         color: rgba($brand-black, .3);
@@ -1023,14 +1054,13 @@ figure {
         }
       }
     }
-
     h3 {
       font-size: 20px;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       font-weight: 300;
       line-height: 1.5;
       a {
-        color: rgba($brand-black, .6);
+        color: rgba($brand-primary, .7);
       }
     }
 
@@ -1041,7 +1071,7 @@ figure {
 }
 
 #fh5co-start-project-section {
-  padding: 7em 0;
+  padding: 5em 0;
   background: #F64E8B;
   h2 {
     color: rgba(255, 255, 255, 1);
@@ -1080,7 +1110,7 @@ figure {
 
 #footer {
   background: $brand-primary;
-  padding: 60px 0 40px;
+  padding: 20px 0 10px;
 
   p {
     color: rgba($brand-white, 1);
@@ -1092,6 +1122,9 @@ figure {
       &:hover, &:active, &:focus {
         color: rgba($brand-white, .9) !important;
       }
+    }
+    &:last-child {
+      padding-bottom: 0;
     }
   }
 
@@ -1339,21 +1372,21 @@ figure {
 }
 
 .row-bottom-padded-lg {
-  padding-bottom: 7em;
+  padding-bottom: 5em;
   @media screen and (max-width: 768px) {
     padding-bottom: 2em;
   }
 }
 
 .row-top-padded-lg {
-  padding-top: 7em;
+  padding-top: 5em;
   @media screen and (max-width: 768px) {
     padding-top: 2em;
   }
 }
 
 .row-bottom-padded-md {
-  padding-bottom: 4em;
+  padding-bottom: 1em;
   @media screen and (max-width: 768px) {
     padding-bottom: 2em;
   }
@@ -1399,14 +1432,42 @@ figure {
   top: 0;
 }
 
-//.fh5co-loader {
-//  position: fixed;
-//  left: 0px;
-//  top: 0px;
-//  width: 100%;
-//  height: 100%;
-//  z-index: 9999;
-//  background: url(../images/hourglass.svg) center no-repeat #222222;
-//}
+//Страница education
+.education {
+  margin: 40px 0;
+  .table-responsive {
+    .description {
+      font-weight: normal;
+      margin: 50px;
 
+      display: none;
+    }
+    td:first-child,
+    td:last-child {
+      font-weight: bold;
+    }
+    h4 {
+      margin: 0 0 10px;
+    }
+  }
+}
 
+.discipline .blog-text {
+  margin-bottom: 40px;
+  h3 {
+    margin-bottom: 15px;
+  }
+  p {
+    margin-bottom: 1em;
+  }
+}
+
+.entry_form {
+  input, textarea {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  button {
+    @include center-block;
+  }
+}

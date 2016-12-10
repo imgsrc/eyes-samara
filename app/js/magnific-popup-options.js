@@ -30,7 +30,9 @@ $(document).ready(function () {
         type : "image",
         gallery :{
             enabled: true
-        }
+        },
+        removalDelay: 300,
+        mainClass: 'mfp-fade'
     });
 
     var magnifVideo = function () {
