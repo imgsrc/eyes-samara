@@ -1,5 +1,8 @@
 $(function () {
 
+    $('.carousel').carousel({
+        interval: 3000
+    })
 
     //SVG Fallback
     if (!Modernizr.svg) {
@@ -8,6 +11,12 @@ $(function () {
         });
     }
     ;
+
+    // $(".desc img").animated("fadeInRight", "fadeOutRight");
+
+    $(".btn_phone").on("click", function(){
+        $("#callback").animated("fadeInDown", 2000);
+    });
 
     //E-mail Ajax Send
     //Documentation & Example: https://github.com/agragregra/uniMail
@@ -66,6 +75,7 @@ $(function () {
     $("img, a").on("dragstart", function (event) {
         event.preventDefault();
     });
+
 
 $("#fh5co-menu-wrap li a, #offcanvas-menu li a").mPageScroll2id();
 

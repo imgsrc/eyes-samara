@@ -98,6 +98,7 @@ $form-group-margin-bottom: 30px;
 // Import 
 @import 'bootstrap/mixins';
 @import 'bootstrap/variables';
+@import "bourbon/bourbon";
 
 /* =======================================================
 *
@@ -159,13 +160,19 @@ figure {
 }
 
 #callback {
+  @include transition(all 2s ease);
   h3 {
+    @include animation-delay(1s);
     margin-top: 20px;
     font-size: 26px;
     color: $brand-primary;
     text-align: center;
     display: none;
   }
+}
+
+#callback.animated {
+  opacity: 1 !important;
 }
 
 #fh5co-header {
@@ -284,7 +291,7 @@ figure {
 }
 
 .top_header {
-  @include flex;
+  display: flex;
   flex-direction: row;
   justify-content: space-around;
   width: 30%;
@@ -481,7 +488,7 @@ figure {
 }
 
 #fh5co-header-section {
-  @include flex;
+  display: flex;;
   flex-flow: row wrap;
   justify-content: center;
   padding: 0;
@@ -751,84 +758,6 @@ figure {
   min-height: 500px;
 }
 
-#fh5co-portfolio-list {
-  @include flexwrap;
-  @include flex;
-  position: relative;
-  float: left;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  li {
-    display: block;
-    padding: 0;
-    margin: 0 0 10px 1%;
-    list-style: none;
-    min-height: 400px;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    float: left;
-    clear: left;
-    position: relative;
-    a {
-      min-height: 400px;
-      padding: 2em;
-      position: relative;
-      width: 100%;
-      display: block;
-      &:before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        content: "";
-        z-index: 80;
-        @include transition(.5s);
-
-        background: rgba(0, 0, 0, .0);
-
-      }
-      &:hover {
-        &:before {
-          background: rgba(0, 0, 0, .5);
-        }
-      }
-
-      .case-studies-summary {
-        width: auto;
-        bottom: 2em;
-        left: 2em;
-        right: 2em;
-        position: absolute;
-        z-index: 100;
-        span {
-          text-transform: uppercase;
-          letter-spacing: 2px;
-          font-size: 13px;
-          color: rgba(255, 255, 255, .7);
-        }
-        h2 {
-          color: $brand-white;
-          margin-bottom: 0;
-        }
-
-      }
-    }
-    &.two-third {
-      width: 65.6%;
-    }
-    &.one-third {
-      width: 32.3%;
-
-    }
-    &.one-half {
-      width: 49%;
-    }
-  }
-}
-
 #fh5co-features {
   padding: 5em 0;
 
@@ -858,6 +787,49 @@ figure {
         margin-bottom: 0;
       }
     }
+  }
+}
+
+.row-bottom-padded-md {
+  .carousel-inner {
+    .item {
+      min-height: 600px;
+    }
+  }
+}
+
+.carousel-inner {
+  .bgslide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+.carousel.fade {
+  opacity: 1;
+}
+
+.carousel.fade {
+  .item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity .5s;
+    display: block;
+  }
+}
+
+.carousel.fade {
+  .item.active {
+    opacity: 1;
+    position: relative;
   }
 }
 
