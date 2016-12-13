@@ -10,17 +10,11 @@ $(function () {
             return $(this).attr("src").replace(".svg", ".png");
         });
     }
-    ;
 
-    // $(".desc img").animated("fadeInRight", "fadeOutRight");
-
-    $(".btn_phone").on("click", function(){
-        $("#callback").animated("fadeInDown", 2000);
-    });
 
     //E-mail Ajax Send
     //Documentation & Example: https://github.com/agragregra/uniMail
-    $("#callback").submit(function () { //Change
+    $("#myModal").submit(function () { //Change
         var th = $(this);
         $.ajax({
             type: "POST",
@@ -37,15 +31,15 @@ $(function () {
         return false;
     });
 
-    $("#entry_form").submit(function() { //Change
+    $("#entry_form").submit(function () { //Change
         var th = $(this);
         $.ajax({
             type: "POST",
             url: "mail.php", //Change
             data: th.serialize()
-        }).done(function() {
+        }).done(function () {
             alert("Спасибо за обращение, мы обязательно свяжемся с вами!");
-            setTimeout(function() {
+            setTimeout(function () {
                 // Done Functions
                 th.trigger("reset");
             }, 1000);
@@ -62,19 +56,19 @@ $(function () {
 
 });
 
-    //Chrome Smooth Scroll
-    try {
-        $.browserSelector();
-        if ($("html").hasClass("chrome")) {
-            $.smoothScroll();
-        }
-    } catch (err) {
-
+//Chrome Smooth Scroll
+try {
+    $.browserSelector();
+    if ($("html").hasClass("chrome")) {
+        $.smoothScroll();
     }
+} catch (err) {
 
-    $("img, a").on("dragstart", function (event) {
-        event.preventDefault();
-    });
+}
+
+$("img, a").on("dragstart", function (event) {
+    event.preventDefault();
+});
 
 
 $("#fh5co-menu-wrap li a, #offcanvas-menu li a").mPageScroll2id();

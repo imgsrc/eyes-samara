@@ -4,6 +4,7 @@
   src: url("../fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"), url("../fonts/icomoon/icomoon.woff?srf3rx") format("woff"), url("../fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
+
 /* =======================================================
 *
 * 	Template Style 
@@ -51,20 +52,26 @@ figure {
 .hidden {
   display: none; }
 
-#callback {
-  -webkit-transition: all 2s ease;
-  transition: all 2s ease; }
-  #callback h3 {
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
+#myModal {
+  max-width: 320px;
+  margin-right: auto;
+  margin-left: auto;
+  position: absolute;
+  top: 0;
+  -webkit-transition: all 3s;
+  transition: all 3s; }
+  #myModal .modal-body input, #myModal .modal-body textarea {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    margin-bottom: 15px; }
+  #myModal h3 {
     margin-top: 20px;
     font-size: 26px;
     color: #F4594D;
     text-align: center;
     display: none; }
-
-#callback.animated {
-  opacity: 1 !important; }
 
 #fh5co-header {
   position: relative;
@@ -167,10 +174,9 @@ figure {
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
           justify-content: space-around;
   width: 30%;
-  padding: 20px 0;
+  padding: 20px;
   position: absolute;
   right: 15%;
   color: #5a5a5a;
@@ -237,7 +243,6 @@ figure {
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
     -webkit-justify-content: space-around;
-        -ms-flex-pack: distribute;
             justify-content: space-around;
     -webkit-box-align: center;
     -webkit-align-items: center;
@@ -300,6 +305,7 @@ figure {
   background: #F4594D;
   -webkit-border-radius: 5px;
           border-radius: 5px; }
+
 .sf-menu li.active a {
   color: #F4594D; }
 
@@ -392,6 +398,7 @@ figure {
 
 #fh5co-primary-menu > li > ul li {
   background: #F4594D !important; }
+
 #fh5co-primary-menu > li > .sf-with-ul:after {
   border: none !important;
   font-family: 'icomoon';
@@ -412,6 +419,7 @@ figure {
   margin-top: -7px;
   content: "\e922";
   color: rgba(0, 0, 0, 0.5); }
+
 #fh5co-primary-menu > li > ul li {
   position: relative; }
   #fh5co-primary-menu > li > ul li > .sf-with-ul:after {
@@ -525,6 +533,7 @@ figure {
     margin-right: 5px;
     color: #F4594D;
     display: inline-block; }
+
 .feature-text p {
   font-size: 16px; }
 
@@ -650,6 +659,7 @@ figure {
     top: 0;
     left: 0;
     background: #F4594D; }
+
 #fh5co-services .fh5co-icon {
   margin-bottom: 30px;
   margin-top: 50px;
@@ -676,6 +686,7 @@ figure {
     #fh5co-contact .contact-info li a {
       font-weight: 400 !important;
       color: rgba(0, 0, 0, 0.3); }
+
 #fh5co-contact .form-control {
   -webkit-box-shadow: none;
   -o-box-shadow: none;
@@ -687,8 +698,10 @@ figure {
   border-radius: 0px; }
   #fh5co-contact .form-control:focus, #fh5co-contact .form-control:active {
     border-bottom: 1px solid rgba(0, 0, 0, 0.5); }
+
 #fh5co-contact input[type="text"] {
   height: 50px; }
+
 #fh5co-contact .form-group {
   margin-bottom: 30px; }
 
@@ -1075,6 +1088,7 @@ figure {
 .entry_form input, .entry_form textarea {
   width: 100%;
   margin-bottom: 15px; }
+
 .entry_form button {
   display: block;
   margin-left: auto;
